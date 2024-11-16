@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>SPOTIFREE | APPLY</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+        <nav> 
+          
+          <a href="index.html"><img src="images/spotifree.png" alt="img"></a>
+          <div class="nav-links" id="navlinks">
+            
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="jobs.html">POSITIONS</a></li>
+              <li><a href="apply.html">APPLICATION</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="enhancements.html">ENHANCEMENTS</a></li>
+            </ul>
+          </div>
+        
+        </nav>
+
+
+
+    <!--Application-->
+    <section class="appli-container">
+        
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+            <div class="appli-content">
+                <header>APPLICATION</header>
+                <div class="column">
+                    <div class="input-box">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" maxlength="20" required pattern="[A-Za-z]+" title="Please enter a valid first name " placeholder="Enter First Name">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lname">Last Name
+                            <input type="text" id="lname" name="lastname" maxlength="20" required pattern="^[A-Za-z]+" placeholder="Enter Last name"/>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="PN">Prefer Name(Optional)</label>
+                        <input type="text" id="PN" name="prefername" pattern="^[A-Za-z]+" title="Please enter a preferred name " placeholder="Enter Preferred Name">
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Male" class="sex" name="Gender" value="male" required/>
+                    
+                    <label for="Female">Female</label>
+                    <input type="radio" id="Female" class="sex" name="Gender" value="female" required/>
+                    
+                    <label for="preferNotToSay">Prefer Not to Say</label> 
+                    <input type="radio" id="preferNotToSay" title="prefernottosay" class="sex" name="Gender" value="preferNotToSay" required>
+                   
+                </fieldset>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Reference Number
+                            <input type="text" name="reference" pattern = "(SE228|DE129|WD303)" title="Please enter one of the following codes: SE228, DE129, WD303" required="required" placeholder="Enter the Reference Number for the Job"/>
+                        </label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="DOB">Date of birth
+                            <input type="text" required="required" pattern="(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{4}" placeholder="dd/mm/yyyy" name="date" id="DOB"/>
+                        </label>
+                    </div>    
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label for="mail">Email Address
+                            <input type="email" id="mail" name="contactemail" placeholder="name@domain.com" required/>
+                    </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="pnum">Phone Number
+                            <input type="tel" id="pnum" name="phonenum" required placeholder="Enter Phone Number" pattern="[0-9 ]{8,12}"/>
+                    </label>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label for="SA">Street Address
+                            <input type="text" id="SA" name="address" maxlength="40" required pattern="^[a-zA-Z ]+$" placeholder="Enter the Street Address"/>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="sub">Suburb
+                            <input type="text" id="sub" name="suburb" maxlength="40" required pattern="^[A-Za-z]+" placeholder="Enter the Suburb"/>
+                            </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Postal Code
+                            <input type="text" name="zip" required title="Please enter fours numbers only" pattern="\d{4}" placeholder="Enter your Postal Code"/>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="state">Select Your State</label>
+                        <select name="state" required id="state">
+                            <option value="" disabled selected>Select Your State</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="column">
+                    <h4 id="title_skill">Skill List</h4>
+                </div>    
+
+                <div class="column">
+                                    
+                    <label for="htmlCheckbox">
+                        <input type="checkbox" id="htmlCheckbox" name="code[]" value="HTML" required checked>
+                        HTML
+                    </label>
+                    <label for="CSS" class="check_box"><input id="CSS" type="checkbox" name="coding[]" value="CSS"/>
+                            CSS3</label>
+                    <label for="Java" class="check_box"><input id="Java" type="checkbox" name="coding[]" value="Java"/>
+                             Javascript</label>
+                    <label for="Redux" class="check_box"><input id="Redux" type="checkbox" name="coding[]" value="redux"/>
+                            Redux</label>    
+                    <label for="certificate" class="check_box"><input id="certificate" type="checkbox" name="coding[]" value="certificate"/>
+                        Industry-recognized certifications</label>
+                    <label for="2-5" class="check_box"><input id="2-5" type="checkbox" name="coding[]" value=">2-5exp"/>
+                            2 to 5 years in the field</label>
+                    <label for="soft" class="check_box"><input id="soft" type="checkbox" name="coding[]" value="soft"/>
+                            Soft Skill</label>  
+                    <label for="research" class="check_box"><input id="research" type="checkbox" name="coding[]" value="decmaking"/>
+                            Research/Analysis</label> 
+                    <label for="otherskill" class="check_box"><input id="otherskill" type="checkbox" name="coding[]" value="other"/>
+                            Other Skills</label>
+                </div>
+                <br>
+                <div class="column">
+                    <label>Other Skills<br><textarea id="other_skill" name="other_skill" rows="7" cols="150" placeholder="Write more details" ></textarea>
+                    </label>
+                </div>
+                
+                <br>
+
+                <div class="column">
+                    <input class="appli_button" type="submit" value="Apply"/>
+                    <input class="appli_button" type="reset" value="Reset"/><br/>
+                </div>
+
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--FOOTER-->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Positions</a></li>
+            <li><a href="apply.html">Application</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Copyright &copy;</h4>
+          <ul>
+            <li><a href="https://www.swinburne.edu.au">Swinburne University of Technology</a></li>
+            <li><a href="https://www.pinterest.com.au">Pinterest</a></li>
+            <li><a href="https://www.freepik.com">Freepik</a></li>
+            <li><a href="https://www.canva.com">Canva</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:104772183@student.swin.edu.au">Khoi Nguyen Pham</a></li>
+            <li><a href="mailto:104201881@student.swin.edu.au">Ngykeang Oeung</a></li>
+            <li><a href="mailto:14172343@student.swin.edu.au">Monytola Long</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ </footer>
+    
+
+</body>
+</html>
